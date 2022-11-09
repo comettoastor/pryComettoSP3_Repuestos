@@ -33,32 +33,36 @@
             this.optNacional = new System.Windows.Forms.RadioButton();
             this.optImportado = new System.Windows.Forms.RadioButton();
             this.mrcOrigen = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblNumeroRepuesto = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
             this.txtNumeroRepuesto = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRegistro = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.mrcConsultaRepuestos = new System.Windows.Forms.GroupBox();
             this.btnConsulta = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblMarcaConsulta = new System.Windows.Forms.Label();
+            this.cmbMarcaConsulta = new System.Windows.Forms.ComboBox();
+            this.mrcOrigenConsulta = new System.Windows.Forms.GroupBox();
+            this.optNacionalConsulta = new System.Windows.Forms.RadioButton();
+            this.optImportadoConsulta = new System.Windows.Forms.RadioButton();
+            this.lblDatosRepuestos = new System.Windows.Forms.Label();
+            this.lstDatosRepuestos = new System.Windows.Forms.ListBox();
             this.mrcOrigen.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.mrcConsultaRepuestos.SuspendLayout();
+            this.mrcOrigenConsulta.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Items.AddRange(new object[] {
+            "Peugeot",
+            "Fiat",
+            "Renault"});
             this.cmbMarca.Location = new System.Drawing.Point(95, 16);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(104, 21);
@@ -67,7 +71,7 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(39, 16);
+            this.lblMarca.Location = new System.Drawing.Point(52, 19);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(37, 13);
             this.lblMarca.TabIndex = 1;
@@ -106,32 +110,32 @@
             this.mrcOrigen.TabStop = false;
             this.mrcOrigen.Text = "Origen";
             // 
-            // label2
+            // lblNumeroRepuesto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Nº de Repuesto";
+            this.lblNumeroRepuesto.AutoSize = true;
+            this.lblNumeroRepuesto.Location = new System.Drawing.Point(6, 122);
+            this.lblNumeroRepuesto.Name = "lblNumeroRepuesto";
+            this.lblNumeroRepuesto.Size = new System.Drawing.Size(83, 13);
+            this.lblNumeroRepuesto.TabIndex = 5;
+            this.lblNumeroRepuesto.Text = "Nº de Repuesto";
             // 
-            // label3
+            // lblDescripcion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(222, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Descripción";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(222, 19);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.lblDescripcion.TabIndex = 6;
+            this.lblDescripcion.Text = "Descripción";
             // 
-            // label4
+            // lblPrecio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(248, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Precio";
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(248, 98);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.TabIndex = 7;
+            this.lblPrecio.Text = "Precio";
             // 
             // txtNumeroRepuesto
             // 
@@ -140,33 +144,33 @@
             this.txtNumeroRepuesto.Size = new System.Drawing.Size(69, 20);
             this.txtNumeroRepuesto.TabIndex = 8;
             // 
-            // textBox2
+            // txtDescripcion
             // 
-            this.textBox2.Location = new System.Drawing.Point(291, 40);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 73);
-            this.textBox2.TabIndex = 9;
+            this.txtDescripcion.Location = new System.Drawing.Point(291, 16);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(163, 73);
+            this.txtDescripcion.TabIndex = 9;
             // 
-            // textBox3
+            // txtPrecio
             // 
-            this.textBox3.Location = new System.Drawing.Point(291, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(74, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtPrecio.Location = new System.Drawing.Point(291, 95);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(74, 20);
+            this.txtPrecio.TabIndex = 10;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnRegistro);
             this.groupBox1.Controls.Add(this.lblMarca);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.cmbMarca);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.mrcOrigen);
             this.groupBox1.Controls.Add(this.txtNumeroRepuesto);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblNumeroRepuesto);
+            this.groupBox1.Controls.Add(this.lblPrecio);
+            this.groupBox1.Controls.Add(this.lblDescripcion);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(465, 159);
@@ -184,24 +188,24 @@
             this.btnRegistro.UseVisualStyleBackColor = true;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
-            // groupBox2
+            // mrcConsultaRepuestos
             // 
-            this.groupBox2.Controls.Add(this.btnConsulta);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(12, 194);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(465, 210);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Consulta de Repuestos";
+            this.mrcConsultaRepuestos.Controls.Add(this.lstDatosRepuestos);
+            this.mrcConsultaRepuestos.Controls.Add(this.btnConsulta);
+            this.mrcConsultaRepuestos.Controls.Add(this.lblMarcaConsulta);
+            this.mrcConsultaRepuestos.Controls.Add(this.cmbMarcaConsulta);
+            this.mrcConsultaRepuestos.Controls.Add(this.mrcOrigenConsulta);
+            this.mrcConsultaRepuestos.Controls.Add(this.lblDatosRepuestos);
+            this.mrcConsultaRepuestos.Location = new System.Drawing.Point(12, 194);
+            this.mrcConsultaRepuestos.Name = "mrcConsultaRepuestos";
+            this.mrcConsultaRepuestos.Size = new System.Drawing.Size(465, 210);
+            this.mrcConsultaRepuestos.TabIndex = 12;
+            this.mrcConsultaRepuestos.TabStop = false;
+            this.mrcConsultaRepuestos.Text = "Consulta de Repuestos";
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(379, 119);
+            this.btnConsulta.Location = new System.Drawing.Point(384, 181);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(75, 23);
             this.btnConsulta.TabIndex = 14;
@@ -209,79 +213,83 @@
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
-            // label5
+            // lblMarcaConsulta
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Marca";
+            this.lblMarcaConsulta.AutoSize = true;
+            this.lblMarcaConsulta.Location = new System.Drawing.Point(52, 19);
+            this.lblMarcaConsulta.Name = "lblMarcaConsulta";
+            this.lblMarcaConsulta.Size = new System.Drawing.Size(37, 13);
+            this.lblMarcaConsulta.TabIndex = 1;
+            this.lblMarcaConsulta.Text = "Marca";
             // 
-            // comboBox2
+            // cmbMarcaConsulta
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(95, 16);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(104, 21);
-            this.comboBox2.TabIndex = 0;
+            this.cmbMarcaConsulta.FormattingEnabled = true;
+            this.cmbMarcaConsulta.Items.AddRange(new object[] {
+            "Peugeot",
+            "Fiat",
+            "Renault"});
+            this.cmbMarcaConsulta.Location = new System.Drawing.Point(95, 16);
+            this.cmbMarcaConsulta.Name = "cmbMarcaConsulta";
+            this.cmbMarcaConsulta.Size = new System.Drawing.Size(104, 21);
+            this.cmbMarcaConsulta.TabIndex = 0;
             // 
-            // textBox5
+            // mrcOrigenConsulta
             // 
-            this.textBox5.Location = new System.Drawing.Point(225, 40);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(229, 73);
-            this.textBox5.TabIndex = 9;
+            this.mrcOrigenConsulta.Controls.Add(this.optNacionalConsulta);
+            this.mrcOrigenConsulta.Controls.Add(this.optImportadoConsulta);
+            this.mrcOrigenConsulta.Location = new System.Drawing.Point(95, 43);
+            this.mrcOrigenConsulta.Name = "mrcOrigenConsulta";
+            this.mrcOrigenConsulta.Size = new System.Drawing.Size(104, 70);
+            this.mrcOrigenConsulta.TabIndex = 4;
+            this.mrcOrigenConsulta.TabStop = false;
+            this.mrcOrigenConsulta.Text = "Origen";
             // 
-            // groupBox3
+            // optNacionalConsulta
             // 
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Location = new System.Drawing.Point(95, 43);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(104, 70);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Origen";
+            this.optNacionalConsulta.AutoSize = true;
+            this.optNacionalConsulta.Location = new System.Drawing.Point(6, 19);
+            this.optNacionalConsulta.Name = "optNacionalConsulta";
+            this.optNacionalConsulta.Size = new System.Drawing.Size(67, 17);
+            this.optNacionalConsulta.TabIndex = 2;
+            this.optNacionalConsulta.TabStop = true;
+            this.optNacionalConsulta.Text = "Nacional";
+            this.optNacionalConsulta.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // optImportadoConsulta
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nacional";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.optImportadoConsulta.AutoSize = true;
+            this.optImportadoConsulta.Location = new System.Drawing.Point(6, 42);
+            this.optImportadoConsulta.Name = "optImportadoConsulta";
+            this.optImportadoConsulta.Size = new System.Drawing.Size(72, 17);
+            this.optImportadoConsulta.TabIndex = 3;
+            this.optImportadoConsulta.TabStop = true;
+            this.optImportadoConsulta.Text = "Importado";
+            this.optImportadoConsulta.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // lblDatosRepuestos
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(72, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Importado";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.lblDatosRepuestos.AutoSize = true;
+            this.lblDatosRepuestos.Location = new System.Drawing.Point(222, 24);
+            this.lblDatosRepuestos.Name = "lblDatosRepuestos";
+            this.lblDatosRepuestos.Size = new System.Drawing.Size(104, 13);
+            this.lblDatosRepuestos.TabIndex = 6;
+            this.lblDatosRepuestos.Text = "Datos de Repuestos";
             // 
-            // label8
+            // lstDatosRepuestos
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(222, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Datos de Repuesto";
+            this.lstDatosRepuestos.FormattingEnabled = true;
+            this.lstDatosRepuestos.Location = new System.Drawing.Point(225, 40);
+            this.lstDatosRepuestos.Name = "lstDatosRepuestos";
+            this.lstDatosRepuestos.Size = new System.Drawing.Size(229, 134);
+            this.lstDatosRepuestos.TabIndex = 15;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(494, 419);
+            this.Controls.Add(this.mrcConsultaRepuestos);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMain";
             this.Text = "Form1";
@@ -289,10 +297,10 @@
             this.mrcOrigen.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.mrcConsultaRepuestos.ResumeLayout(false);
+            this.mrcConsultaRepuestos.PerformLayout();
+            this.mrcOrigenConsulta.ResumeLayout(false);
+            this.mrcOrigenConsulta.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -304,23 +312,23 @@
         private System.Windows.Forms.RadioButton optNacional;
         private System.Windows.Forms.RadioButton optImportado;
         private System.Windows.Forms.GroupBox mrcOrigen;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblNumeroRepuesto;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtNumeroRepuesto;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRegistro;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox mrcConsultaRepuestos;
         private System.Windows.Forms.Button btnConsulta;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblMarcaConsulta;
+        private System.Windows.Forms.ComboBox cmbMarcaConsulta;
+        private System.Windows.Forms.GroupBox mrcOrigenConsulta;
+        private System.Windows.Forms.RadioButton optNacionalConsulta;
+        private System.Windows.Forms.RadioButton optImportadoConsulta;
+        private System.Windows.Forms.Label lblDatosRepuestos;
+        private System.Windows.Forms.ListBox lstDatosRepuestos;
     }
 }
 
